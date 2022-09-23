@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+	  <sections>
+		<design  translate="label" module="facebookmetatag">
+					<groups>
+				      <design_header translate="label"> 
+				       <fields>
+                          <facebook_verification translate="label">
+                            <label>facebook Verification</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>facebook domain verification code</comment>
+                          </facebook_verification>
+					   </fields>
+					   </design_header>
+					</groups>
+		</design>
+	  </sections>
+</config>

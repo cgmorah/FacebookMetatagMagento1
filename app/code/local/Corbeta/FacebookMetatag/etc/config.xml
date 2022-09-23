@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Corbeta_FacebookMetatag>
+      <version>0.1.0</version>
+    </Corbeta_FacebookMetatag>
+  </modules>
+  <global>
+    <helpers>
+      <facebookmetatag>
+        <class>Corbeta_FacebookMetatag_Helper</class>
+      </facebookmetatag>
+    </helpers>
+	<blocks>
+	  <facebookmetatag>
+		<class>Corbeta_FacebookMetatag_Block</class>
+	  </facebookmetatag>
+	</blocks>
+  </global>
+  <admin>
+	<routers>
+	  <facebookmetatag>
+	    <use>admin</use>
+		<args>
+		  <module>Corbeta_FacebookMetatag</module>
+		  <frontName>admin_facebookmetatag</frontName>
+		</args>
+	  </facebookmetatag>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <facebookmetatag module="facebookmetatag">
+		<title>FacebookMetatag</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <facebookmetatagbackend module="facebookmetatag">
+			<title>Facebook Metatag Verification</title>
+			<sort_order>0</sort_order>
+			<action>admin_facebookmetatag/adminhtml_facebookmetatagbackend</action>
+		  </facebookmetatagbackend>
+		</children>
+	  </facebookmetatag>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<facebookmetatag translate="title" module="facebookmetatag">
+			  <title>FacebookMetatag</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <facebookmetatagbackend translate="title">
+			<title>Facebook Metatag Verification</title>
+		  </facebookmetatagbackend>
+			  </children>
+			</facebookmetatag>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<facebookmetatag>
+		  <file>facebookmetatag.xml</file>
+		</facebookmetatag>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 
